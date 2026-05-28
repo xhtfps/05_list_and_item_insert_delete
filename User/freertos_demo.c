@@ -200,11 +200,12 @@ void task2(void * pvParameters)
 	printf("/***************************结束*******************************/\r\n");
 
 	uxListRemove(&ListItem2); 		/* 删除链表项2 */
+	printf(\r\n删除链表项2后:\r\n);
 
 	/* 第八步：更改列表指针*/
 	printf("\r\n/*********************实验7:更改列表指针***********************/\r\n");
 	TestList.pxIndex = ListItem1.pxNext;	/* 将列表指针指向链表项1的下一个链表项 */
-	vListInsertEnd((List_t*    )&TestList,
+	vListInsertEnd((List_t*    )&TestList,	/* 列表末尾添加列表项2*/
 			(ListItem_t*)&ListItem2);
 	printf("变量名\t\t\t地址\r\n");
 	printf("TestList->xListEnd->pxNext\t0x%p\r\n", (TestList.xListEnd.pxNext));
