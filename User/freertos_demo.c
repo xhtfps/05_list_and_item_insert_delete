@@ -44,16 +44,16 @@ void start_task(void * pvParameters);
 /* TASK1 任务配置
  * 优先级: 2 堆栈大小:128 任务句柄:task1_handler
  */
-#define TASK1_PRIO			2 
-#define TASK1_STACK_SIZE 	128
+#define TASK1_PRIO				2 
+#define TASK1_STACK_SIZE 		128
 TaskHandle_t	task1_handler;
 void task1(void * pvParameters);
 
 /* TASK2 任务配置
  * 优先级: 3 堆栈大小:512 任务句柄:task2_handler
  */
-#define TASK2_PRIO			3 
-#define TASK2_STACK_SIZE 	512
+#define TASK2_PRIO				3 
+#define TASK2_STACK_SIZE 		128
 TaskHandle_t	task2_handler;
 void task2(void * pvParameters);
 /******************************************************************************************************/
@@ -222,6 +222,5 @@ void task2(void * pvParameters)
 	{
 		vTaskDelay(1000);
 	}
-
 
 }
